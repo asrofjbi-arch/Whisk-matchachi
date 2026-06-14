@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Whisk Matchaci — Premium Matcha Experience</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<meta name="description" content="Whisk Matchaci menghadirkan matcha premium dengan konsep dark minimalist luxury, rasa autentik Jepang, dan pengalaman minum yang elegan.">
+<meta name="keywords" content="whisk matchaci, matcha premium, dark minimalist, fnb luxury, matcha indonesia">
+
+<style>
+:root{
+  --bg:#10860a;
+  --card:#000000;
+  --text:#ffffff;
+  --muted:#6b7a6b;
+  --line:#dbe5d3;
+  --accent:#7cb342;
+  --accent-dark:#558b2f;
+  --accent-light:#dcedc8;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:linear-gradient(
+    135deg,
+    #84ff00 0%,
+    #000000 50%,
+    #05f909c2 100%
+  );
+  color:var(--text);
+}
+
+/* NAV */
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(8,28,21,.95);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(212,175,55,.2);
+}
+
+.nav{
+    max-width:1400px;
+    margin:auto;
+    padding:18px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-family:'Montserrat',sans-serif;
+    font-size:24px;
+    font-weight:800; 
+    color:#D4AF37;
+    letter-spacing:2px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#F8F5E9;
+    font-weight:500;
+    padding:10px 18px;
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.04);
+
+    transition:.3s;
+    white-space:nowrap;
+}
+
+.nav-links a:hover{
+    color:#7fff00;
+    border-color:#7fff00;
+    background:rgba(127,255,0,.12);
+
+    box-shadow:
+    0 0 10px rgba(127,255,0,.2),
+    0 0 20px rgba(127,255,0,.1);
+}
+
+.active{
+    background:#7fff00;
+    color:white !important;
+    border-color:#7fff00;
+}
+
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:#D4AF37;
+    transition:.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.social-mini{
+    display:flex;
+    gap:15px;
+    color:#D4AF37;
+    font-size:18px;
+}
+
+.order-btn{
+    background:#D4AF37;
+    color:#081C15;
+    padding:12px 28px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.order-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(212,175,55,.3);
+}
+/* HERO */
+.hero{
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(0,0,0,.7),
+    rgba(251,255,0,.2)
+  ),
+  url("gmb/gmb-bg.jpeg");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-weight:800;
+  font-size:clamp(3rem,6vw,5rem);
+
+  background:linear-gradient(
+    90deg,
+    #dcedc8,
+    #ffffff,
+    #a5d66f
+  );
+
+  -webkit-background-clip:text;
+  color:transparent;
+
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:700px;
+  margin:0 auto 30px;
+  color:#d9ff9f;
+  text-align:center;
+}
+
+.cta{
+  display:inline-block;
+
+  background:linear-gradient(
+    135deg,
+    #8bc34a,
+    #558b2f
+  );
+
+  color:white;
+  text-decoration:none;
+
+  padding:15px 35px;
+  border-radius:50px;
+
+  font-weight:700;
+
+  transition:.3s;
+}
+
+.cta:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 10px 25px rgba(124,179,66,.4);
+
+  color:white;
+}
+
+/* SECTION */
+section{
+  padding:90px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.title{
+  font-family:'Playfair Display',serif;
+  font-weight:700;
+  font-size:32px;
+  color:#000000;
+  text-align:center;
+}
+
+.subtitle{
+  text-align:center;
+}
+
+/* STORY */
+.story{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  padding:22px;
+  transition:0.35s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:#333;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+
+.product{
+  background:rgb(0, 0, 0);
+  border:none;
+  border-radius:10px;
+  min-height:500px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  overflow:hidden;
+  transition:.4s;
+}
+
+.product:hover{
+  transform:
+  translateY(-10px);
+
+  box-shadow:
+  0 20px 40px rgba(124,179,66,.25);
+}
+
+.product:nth-child(1){
+  border-top:6px solid #8bc34a;
+}
+
+.product:nth-child(2){
+  border-top:6px solid #ffb74d;
+}
+
+.product:nth-child(3){
+  border-top:6px solid #8d6e63;
+}
+
+.product img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:15px;
+  transition:.4s;
+}
+
+.product:hover img{
+  transform:scale(1.05);
+}
+
+.product strong{
+  display:block;
+  margin-bottom:5px;
+  font-size:18px;
+}
+
+.product small{
+  color:var(--muted);
+}
+
+.title{
+  color:#2fff00;
+}
+
+.cta{
+  background:
+  linear-gradient(
+    135deg,
+    #8bc34a,
+    #558b2f
+  );
+
+  color:white;
+  border:none;
+  border-radius:50px;
+  padding:15px 35px;
+  font-weight:700;
+}
+
+.cta:hover{
+  transform:translateY(-3px);
+  box-shadow:
+  0 10px 25px rgba(124,179,66,.4);
+}
+
+/* TESTIMONIAL */
+.testi{
+  display:grid;
+  gap:14px;
+}
+
+.quote strong{
+    display:block;
+    margin-top:10px;
+    color:#8bc34a;
+    font-style:normal;
+    font-weight:600;
+}
+
+.quote{
+  padding:20px;
+  border:1px solid var(--line);
+  background:var(--card);
+  color:var(--muted);
+  font-style:italic;
+  transition:0.3s;
+}
+
+.quote:hover{
+  transform:translateY(-4px);
+  border-color:#7fff00;
+  color:var(--text);
+}
+
+.customer-name{
+  display:block;
+  margin-top:15px;
+  color:#7fff00;
+  font-size:14px;
+  font-weight:600;
+  font-style:normal;
+  letter-spacing:1px;
+}
+
+/* NEW SECTION */
+
+.hero-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:50px;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:500px;
+    border-radius:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,.5);
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:50px;
+}
+
+.stats .card{
+    text-align:center;
+    border-radius:20px;
+}
+
+.stats h2{
+    color:#7fff00;
+    font-size:40px;
+}
+
+.team{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.team-card{
+    background:#000;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    border:1px solid #333;
+}
+
+.team-card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.social{
+    margin-top:20px;
+}
+
+.social i{
+    font-size:25px;
+    margin:0 10px;
+    color:#8bc34a;
+}
+
+footer{
+    background:#000;
+}
+
+@media(max-width:768px){
+
+.hero-content{
+    grid-template-columns:1fr;
+}
+
+.stats{
+    grid-template-columns:1fr;
+}
+}
+
+/* FAQ */
+.faq details{
+  border:1px solid var(--line);
+  padding:16px;
+  margin-bottom:10px;
+  background:var(--card);
+  cursor:pointer;
+}
+
+summary{
+  font-weight:600;
+  color:var(--text);
+}
+
+/* CONTACT */
+form{
+  display:grid;
+  gap:12px;
+}
+
+input,textarea{
+  padding:12px;
+  border:1px solid var(--line);
+  background:#0f0f10;
+  color:var(--text);
+  outline:none;
+}
+
+button{
+  padding:12px;
+  border:1px solid var(--text);
+  background:transparent;
+  color:var(--text);
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:var(--text);
+  color:#000;
+}
+
+/* FOOTER */
+footer{
+  padding:50px 20px;
+  border-top:1px solid var(--line);
+  text-align:center;
+  color:var(--muted);
+}
+
+@media (max-width:768px){
+
+.nav{
+    flex-direction:column;
+    padding:15px;
+    gap:15px;
+}
+
+.nav-links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+}
+
+.nav-links a{
+    padding:8px 14px;
+    font-size:13px;
+    border-radius:50px;
+}
+
+.nav-right{
+    flex-direction:row;
+    justify-content:center;
+    gap:12px;
+}
+
+.order-btn{
+    padding:10px 18px;
+    font-size:13px;
+}
+
+.products,
+.story,
+.testi,
+.gallery,
+.team,
+.stats{
+    grid-template-columns:1fr;
+}
+
+.product{
+    min-height:auto;
+}
+
+.product img{
+    height:220px;
+}
+
+.title{
+    font-size:26px;
+}
+
+.hero h1{
+    font-size:2rem;
+}
+
+section{
+    padding:50px 15px;
+}
+
+}
+
+/* ANIMATION */
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  animation:up 1s forwards;
+}
+
+@keyframes up{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.d1{animation-delay:.2s}
+.d2{animation-delay:.4s}
+.d3{animation-delay:.6s}
+
+/* RESPONSIVE */
+@media(min-width:768px){
+  .story{grid-template-columns:1fr 1fr;}
+  .products{grid-template-columns:repeat(3,1fr);}
+  .testi{grid-template-columns:repeat(3,1fr);}
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- NAV -->
+<header>
+  <div class="nav">
+
+    <div class="logo">
+      <i class="fa-solid fa-mug-hot"></i>
+      WHISK MATCHACI
+    </div>
+
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#story">Story</a>
+      <a href="#products">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testi">Review</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="nav-right">
+
+      <div class="social-mini">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-tiktok"></i>
+      </div>
+
+      <a href="#contact" class="order-btn">
+        Order Now
+      </a>
+
+    </div>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="reveal">
+    <h1>Dark Minimal Matcha Experience</h1>
+    <p>
+      Whisk Matchaci menghadirkan matcha premium dalam interpretasi modern yang gelap, elegan, dan tenang —
+      dirancang untuk mereka yang menghargai detail dan kualitas.
+    </p>
+    <a class="cta" href="#products">Explore Menu</a>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <h2 class="title reveal">Brand Philosophy
+    <i class="fa-solid fa-book"></i>
+  </h2>
+  <p class="subtitle reveal d1">
+    Kami tidak mengikuti tren. Kami membangun pengalaman rasa yang jujur, tenang, dan konsisten.
+  </p>
+
+  <div class="story">
+    <div class="card reveal d1">
+      <strong>Origin</strong>
+      <p>Terinspirasi dari ritual matcha Jepang yang fokus pada ketenangan dan kesadaran rasa.</p>
+    </div>
+
+    <div class="card reveal d2">
+      <strong>Craft</strong>
+      <p>Diproses dengan teknik tradisional untuk menjaga karakter asli daun matcha premium.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <h2 class="title reveal">Signature Menu
+    <i class="fa-solid fa-book-open"></i>
+  </h2>
+
+  <p class="subtitle reveal d1">
+    Tiga menu favorit Whisk Matcha dengan cita rasa premium dan tampilan yang menarik.
+  </p>
+
+  <div class="products">
+
+    <div class="product reveal d1">
+      <img src="gmb/gmb-matcha1.jpeg" alt="Matcha Oreo">
+
+      <strong>Matcha Oreo</strong>
+      <small>— crunchy oreo blend</small>
+
+      <p>
+        Perpaduan matcha premium dengan remahan oreo yang renyah,
+        menghasilkan rasa manis dan tekstur yang unik.
+      </p>
+    </div>
+
+    <div class="product reveal d2">
+      <img src="gmb/gmb-matcha2.jpeg" alt="Matcha Caramel">
+
+      <strong>Matcha Caramel</strong>
+      <small>— sweet creamy delight</small>
+
+      <p>
+        Kombinasi matcha autentik dengan caramel yang lembut dan creamy,
+        menciptakan rasa yang seimbang dan nikmat.
+      </p>
+    </div>
+
+    <div class="product reveal d3">
+      <img src="gmb/gmb-matcha3.jpeg" alt="Matcha Crumble">
+
+      <strong>Matcha Crumble</strong>
+      <small>— rich crunchy sensation</small>
+
+      <p>
+        Matcha premium dengan topping crumble renyah yang memberikan
+        sensasi rasa dan tekstur yang berbeda di setiap tegukan.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section id="testi">
+  <h2 class="title reveal">
+    Customer Voice
+    <i class="fa-solid fa-comment"></i>
+  </h2>
+
+  <div class="testi">
+
+    <div class="quote reveal d1">
+      <p>
+        “Rasanya clean tapi dalam. Ada karakter premium yang jelas terasa.”
+      </p>
+
+      <span class="customer-name">
+        ★★★★★ — Raka Pratama
+      </span>
+    </div>
+
+    <div class="quote reveal d2">
+      <p>
+        “Desain brand dan rasa matchanya sama-sama mahal.”
+      </p>
+
+      <span class="customer-name">
+        ★★★★★ — Nabila Putri
+      </span>
+    </div>
+
+    <div class="quote reveal d3">
+      <p>
+        “Ini bukan minuman biasa, ini pengalaman.”
+      </p>
+
+      <span class="customer-name">
+        ★★★★ — Farhan Akbar
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<section class="stats">
+  <div class="card">
+    <h2>10K+</h2>
+    <p>Happy Customers</p>
+  </div>
+
+  <div class="card">
+    <h2>4.9★</h2>
+    <p>Rating</p>
+  </div>
+
+  <div class="card">
+    <h2>50+</h2>
+    <p>Menu Served Daily</p>
+  </div>
+</section>
+
+<!-- GALERY -->
+<section id="gallery">
+
+<h2 class="title">
+Gallery
+<i class="fa-solid fa-camera"></i>
+</h2>
+
+<p class="subtitle">
+Koleksi minuman premium Whisk Matchaci.
+</p>
+
+<div class="gallery">
+
+<img src="gmb/gmb-matcha1.jpeg">
+<img src="gmb/gmb-matcha2.jpeg">
+<img src="gmb/gmb-matcha3.jpeg">
+<img src="gmb/gmb-matcha4.jpg">
+<img src="gmb/gmb-matcha5.jpg">
+<img src="gmb/gmb-matcha6.jpeg">
+
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2 class="title reveal">FAQ
+    <i class="fa-solid fa-circle-question"></i>
+  </h2>
+
+  <details class="reveal d1">
+    <summary>Apakah semua produk tanpa pengawet?</summary>
+    <p>Ya, semua dirancang untuk menjaga kualitas rasa alami.</p>
+  </details>
+
+  <details class="reveal d2">
+    <summary>Apakah cocok untuk peminum baru?</summary>
+    <p>Rasa kami dibuat seimbang agar mudah dinikmati semua orang.</p>
+  </details>
+
+  <details class="reveal d3">
+    <summary>Apa yang membuat Whisk Matchaci berbeda?</summary>
+    <p>Kami fokus pada pengalaman rasa, bukan sekadar minuman.</p>
+  </details>
+</section>
+
+<!-- PROMO -->
+<section>
+
+<h2 class="title">
+Special Promo
+<i class="fa-solid fa-gift"></i>
+</h2>
+
+<div class="card">
+
+<h3>Buy 2 Get 1 Free</h3>
+
+<p>
+Nikmati promo spesial setiap akhir pekan
+untuk semua menu Matcha Latte.
+</p>
+
+<a href="#" class="cta">
+Claim Promo
+</a>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="title reveal">Contact
+    <i class="fa-solid fa-phone"></i>
+  </h2>
+  <p class="subtitle reveal d1">Hubungi kami untuk kolaborasi atau pemesanan.</p>
+
+  <form class="reveal d2">
+    <input type="text" placeholder="Nama">
+    <input type="email" placeholder="Email">
+    <textarea rows="5" placeholder="Pesan"></textarea>
+    <button>Kirim</button>
+  </form>
+</section>
+
+<!-- TEAM -->
+<section>
+
+<h2 class="title">
+Our Team
+<i class="fa-solid fa-users"></i>
+</h2>
+
+<div class="team">
+
+<div class="team-card">
+
+<img src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png">
+
+<h3>Asrop</h3>
+
+<p>Alamsyah</p>
+
+</div>
+
+<div class="team-card">
+
+<img src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png">
+
+<h3>Farel Arbi</h3>
+
+<p>Adil Pangestu</p>
+
+</div>
+
+<div class="team-card">
+
+<img src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png">
+
+<h3>M Fatir</h3>
+
+<p>Nur Rahman</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<h2>WHISK MATCHACI</h2>
+
+<p>
+Premium Matcha Experience
+</p>
+
+<div class="social">
+
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-tiktok"></i>
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-x-twitter"></i>
+
+</div>
+
+<br>
+
+<p>
+Jl. Matcha Premium No. 88
+</p>
+
+<p>
+Open Daily 08.00 - 22.00
+</p>
+
+<br>
+
+<p>
+© 2026 Whisk Matchaci
+</p>
+
+</footer>
+
+</body>
+</html>
